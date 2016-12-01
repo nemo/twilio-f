@@ -1,3 +1,5 @@
+var _ = require('lodash');
+var qs = require('qs');
 var twilio = require('twilio');
 var util = require('util');
 
@@ -15,10 +17,14 @@ var util = require('util');
 *   - {Any} returnValue JSON serializable (or Buffer) return value
 */
 module.exports = (params, callback) => {
-    var toNumber = params.args[1] || params.kwargs.to || params.kwargs['To'];
-    var fromNumber = params.args[2] || params.kwargs.From || params.kwargs['From'] || '';
-    var messageBody = params.args[3] || params.kwargs.Body || params.kwargs.body || '';
-    var forwardType = params.args[0] || params.kwargs.type || params.kwargs.Type || '';
+    var formData = params.buffer && params.buffer.toString() || '';
+    var formParams = formData && formData.length && qs.parse(formData) || {};
+    var options = Object.assign({}, params.kwargs, formParams);
+
+    var toNumber =  options.to || options['To'] || params.args[1] || 'bad-number';
+    var fromNumber =  options.From || options['From'] || params.args[2] || '';
+    var messageBody = options.Body || options.body || params.args[3] || '';
+    var forwardType = options.type || options.Type || params.args[0] || '';
 
     var response = new twilio.TwimlResponse();
 
@@ -26,10 +32,13 @@ module.exports = (params, callback) => {
         response.dial(toNumber);
     } else {
         var message = util.format("%s: %s", fromNumber, messageBody);
+
         response.message(message, {
             to: toNumber
         });
     }
+
+
 
     callback(null, new Buffer(response.toString()));
 };

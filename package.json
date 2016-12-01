@@ -7,11 +7,11 @@
   "dependencies": {
     "twilio": "^2.11.1"
   },
-  "private": true,
+  "private": false,
   "stdlib": {
     "name": "nemo/twilio",
     "defaultFunction": "forward",
     "timeout": 10000,
-    "publish": false
+    "publish": true
   }
 }

@@ -3,7 +3,7 @@
 
 This service helps you forward calls or SMS that you receive on a Twilio Number to any phone number that you'd like.
 
-It's a micro-service built using using [stdlib](https://stdlib.com) that you can use as a Twilio [Number web-hook](https://support.twilio.com/hc/en-us/articles/223179908-Setting-up-call-forwarding#devs).
+It's a micro-service built using [stdlib](https://stdlib.com) that you can use as a Twilio [Number web-hook](https://support.twilio.com/hc/en-us/articles/223179908-Setting-up-call-forwarding#devs).
 
 ## Usage
 

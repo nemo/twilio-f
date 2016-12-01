@@ -3,13 +3,13 @@
   "description": "Function",
   "args": [
     "type (SMS or call)",
-    "To (phone number to forward to call / SMS to)",
+    "ForwardTo (phone number to forward to call / SMS to)",
     "From (from phone number)",
     "Body (message body for SMS)"
   ],
   "kwargs": {
     "type": "SMS or call",
-    "to": "phone number to forward to call / SMS to",
+    "ForwardTo": "phone number to forward to call / SMS to",
     "From": "from phone number",
     "Body": "message body for SMS"
   },

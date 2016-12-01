@@ -1,6 +1,6 @@
 {
   "name": "twilio-f",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Twilio Forwarding Service",
   "author": "nemo <nima@halfmoon.ws>",
   "main": "f/forward/index.js",

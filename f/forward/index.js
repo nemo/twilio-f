@@ -1,4 +1,3 @@
-var _ = require('lodash');
 var qs = require('qs');
 var twilio = require('twilio');
 var util = require('util');
@@ -21,7 +20,7 @@ module.exports = (params, callback) => {
     var formParams = formData && formData.length && qs.parse(formData) || {};
     var options = Object.assign({}, params.kwargs, formParams);
 
-    var toNumber =  options.to || options['To'] || params.args[1] || 'bad-number';
+    var toNumber =  options.forward_to || options['ForwardTo'] || params.args[1] || 'bad-number';
     var fromNumber =  options.From || options['From'] || params.args[2] || '';
     var messageBody = options.Body || options.body || params.args[3] || '';
     var forwardType = options.type || options.Type || params.args[0] || '';

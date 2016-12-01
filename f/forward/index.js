@@ -31,5 +31,5 @@ module.exports = (params, callback) => {
         });
     }
 
-    callback(null, response.toString());
+    callback(null, new Buffer(response.toString()));
 };

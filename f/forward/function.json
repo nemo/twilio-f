@@ -1,0 +1,21 @@
+{
+  "name": "forward",
+  "description": "Function",
+  "args": [
+    "type (SMS or call)",
+    "To (phone number to forward to call / SMS to)",
+    "From (from phone number)",
+    "Body (message body for SMS)"
+  ],
+  "kwargs": {
+    "type": "SMS or call",
+    "to": "phone number to forward to call / SMS to",
+    "From": "from phone number",
+    "Body": "message body for SMS"
+  },
+  "http": {
+    "headers": {
+        "Content-Type": "text/html;charset=UTF-8"
+    }
+  }
+}

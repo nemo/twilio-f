@@ -1,0 +1,21 @@
+{
+  "name": "sendMessage",
+  "description": "Function",
+  "args": [],
+  "kwargs": {
+    "from": "From number (optional if MessagingServiceSid is provided)",
+    "MessagingServiceSid": "the Messaging Service Sid (optional if From is provided)",
+    "to": "Recipient of the message",
+    "splitLength": "length to use to split the message. Default is 320. Set to 0 to disable.",
+    "body": "Body of the message. Can be over 160 characters. (optional if MediaUrl is provided)",
+    "mediaUrls": "List of Media Urls to send. 5Mb liimit per file. (optional unless no Body is provided)",
+    "StatusCallback": "Status Callback URL (optional)",
+    "ApplicationSid": "Application Sid (optional)",
+    "MaxPrice": "Max Price you're okay with (optional)",
+    "ProvideFeedback": "Enable Message Feedback API (optional, false by default)",
+    "<other params for twilio's sendMessage API>": "Other params are also passed in right away to Twilio"
+  },
+  "http": {
+    "headers": {}
+  }
+}

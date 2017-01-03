@@ -78,3 +78,7 @@ This function responds with [Twiml](https://www.twilio.com/docs/api/twiml) that 
 [function spec](https://github.com/nemo/twilio-f/blob/master/f/sendMessage/function.json) | [source](https://github.com/nemo/twilio-f/blob/master/f/sendMessage/index.js)
 
 This function sends a message using Twilio's [messages.create](https://www.twilio.com/docs/api/rest/sending-messages?code-sample=code-send-a-message-with-an-image-url&code-language=js&code-sdk-version=2.x) API. It handles cases were the message body is too long, only a media Url is provided or multiple mediaUrls are being sent.
+
+
+## LICENSE
+MIT

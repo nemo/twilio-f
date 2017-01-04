@@ -51,7 +51,6 @@ module.exports = (params, callback) => {
     var response = [];
     var failures = 0;
 
-    debugger;
     async.eachSeries(_.compact(messages), (message, callback) =>
         client.messages.create(message, (err, result) => {
             if (err) {

@@ -8,7 +8,7 @@ It's a micro-service built using [stdlib](https://stdlib.com) that you can use a
 ## Usage
 
 ### SMS & Call Forwarding
-This service is already available to be used on [stdlib here](http://stdlib.com/services/nemo/twilio), or you can fork it and launch your version of it on [stdlib](https://stdlib.com).
+This service is already available to be used on [stdlib here](https://stdlib.com/@nemo/lib/twilio/), or you can fork it and launch your version of it on [stdlib](https://stdlib.com).
 
 The main function is called `forward` and it accepts two parameters (other than the ones that come from Twilio):
 
@@ -39,7 +39,7 @@ Twilio provides a great API for [sending messages](https://www.twilio.com/docs/a
 
 The main features are that it handles **multiple mediaUrls**, automatically **truncates long messages** and **attempts to control delivery order** using timeouts.
 
-You have to set the following enviornment variables to make the function work (which means you have to fork this repo and submit your own [stdlib](https://stdlib.com) function!):
+You have to set the following environment variables to make the function work (which means you have to fork this repo and submit your own [stdlib](https://stdlib.com) function!):
 
 - `TWILIO_ACCOUNT_SID` - Twilio Account SID
 - `TWILIO_ACCOUNT_AUTH` - Twilio Account Auth

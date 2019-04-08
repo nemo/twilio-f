@@ -18,13 +18,13 @@ The main function is called `forward` and it accepts two parameters (other than 
 So to construct a webhook that forwards all calls to `415-xxx-xxxx`, all you have to do is:
 
 ```
-https://f.stdlib.com/nemo/twilio/forward?ForwardTo=+1415xxxxxxx&type=call
+https://nemo.api.stdlib.com/twilio/forward?ForwardTo=+1415xxxxxxx&type=call
 ```
 
 And to do the same for SMS:
 
 ```
-https://f.stdlib.com/nemo/twilio/forward?ForwardTo=+1415xxxxxxx&type=SMS
+https://nemo.api.stdlib.com/twilio/forward?ForwardTo=+1415xxxxxxx&type=SMS
 ```
 
 You can use these URLs as the web-hooks in Twilio's [Voice](https://support.twilio.com/hc/en-us/articles/223179908-Setting-up-call-forwarding#devs) and [SMS](https://support.twilio.com/hc/en-us/articles/223134287-Forwarding-SMS-messages-to-another-phone-number#dev) web-hooks.
